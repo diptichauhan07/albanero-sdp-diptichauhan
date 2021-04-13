@@ -1,0 +1,20 @@
+//Java program for mthod overloading
+class AddNo
+{
+  static int Add(int a, int b)
+  {
+    return a+b;
+  }
+  static double Add(double a, double b)
+  {
+    return a+b;
+  }
+}
+class Main
+{
+  public static void main(String args[])
+  {
+     System.out.println(AddNo.Add(2, 5));
+     System.out.println(AddNo.Add(2.5, 5.4));
+  }
+}
