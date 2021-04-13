@@ -1,0 +1,27 @@
+//Program to show no is armstrong or not
+import java.util.Scanner;
+class ArmstrongNo
+{
+  public static void main(String args[])
+  {
+	int n, s=0, t, r;
+	Scanner sc = new Scanner(System.in);
+	System.out.println("enter the value");
+	n = sc.nextInt();
+	t = n;
+	while(n>0)
+	{
+	  r= n%10;
+	  n = n/10;
+	  s = s+(r*r*r);
+	}
+	if(t == s)
+	{
+	  System.out.println(t+" is armstrong no");
+	}
+	else
+	{
+	  System.out.println(t+" is not a armstrong no");
+	}
+  }
+}
