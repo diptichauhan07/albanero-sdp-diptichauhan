@@ -1,0 +1,42 @@
+// Java program for method overriding
+class Parent 
+{
+  
+    void Print()
+    {
+        System.out.println("This is a parent class");
+    }
+}
+  
+class childclass1 extends Parent 
+{
+  
+    void Print()
+    {
+        System.out.println("This is a childclass1");
+    }
+}
+  
+class childclass2 extends Parent 
+{
+  
+    void Print()
+    {
+        System.out.println("This is a childclass2");
+    }
+}
+  
+class TestPolymorphism
+{
+    public static void main(String[] args)
+    {
+  
+        Parent a;
+  
+        a = new childclass1();
+        a.Print();
+  
+        a = new childclass2();
+        a.Print();
+    }
+}
