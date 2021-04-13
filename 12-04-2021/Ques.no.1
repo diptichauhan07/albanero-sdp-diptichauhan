@@ -1,0 +1,20 @@
+// Program to show Fabonacci Series
+import java.util.Scanner;
+class FibonacciSeries
+{ 
+  public static void main(String args[])
+  {
+    int a=0, b=1, s=0, i, n;
+	Scanner sc = new Scanner(System.in);
+	System.out.println("enter the value upto which fibonacci series should print");
+	n = sc.nextInt();
+	System.out.print(a + " " + b);
+	for(i=2; i<n; i++)
+	{
+	  s= a + b;
+	  System.out.print(" " + s);
+	  a = b;
+	  b = s;
+	}
+  }
+}
