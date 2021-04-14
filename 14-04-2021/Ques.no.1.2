@@ -1,0 +1,19 @@
+// Example program for abstract class in java
+abstract class Shape
+{
+   int b = 20;
+   abstract public void calculatedArea();
+}
+public class Rectangle extends Shape
+{
+   public static void main(String args[])
+   {
+      Rectangle obj = new Rectangle();
+      obj.b = 200;
+      obj.calculateArea();
+   }
+   public void calculateArea()
+   {
+      System.out.println("Area is" +(obj.b * obj.b));
+   }
+}
