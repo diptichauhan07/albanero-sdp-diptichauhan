@@ -1,0 +1,25 @@
+// example program to show Generic classes
+class Test<T>
+{
+   T obj;
+   Test (T obj)
+   {
+      this.obj = obj;
+   }
+   public T getObj()
+   {
+      return this.obj;
+   }
+}
+class Main
+{
+   public static void main(String []args)
+   {
+      Test <Integer> i = new Test<Integer>(11);
+      System.out.println(i.getObj());
+      Test <String> s = new Test<String>("Dipti");
+      System.out.println(s.getOj());
+   }
+}
+
+
