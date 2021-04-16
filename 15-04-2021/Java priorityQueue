@@ -1,0 +1,26 @@
+// example program of java pirority key
+import java.util.*;
+class PriorityQueueExample
+{
+   public static void main(String args[])
+   {
+      PriorityQueue<String> queue = new  PriorityQueue<String>;
+      queue.add("Jaya");  
+      queue.add("Susma");  
+      queue.add("Kiran");  
+      queue.add("Juhi");  
+      queue.add("Ritika");
+      System.out.println("head:"+queue.peek());
+      iterator itr = queue.iterator()
+      while(itr.hasNext())
+      {
+         System.out.println(itr.next());
+      }
+      queue.remove();
+      queue.poll();
+       while(itr1.hasNext())
+      {
+         System.out.println(itr1.next());
+      }
+   }
+}
