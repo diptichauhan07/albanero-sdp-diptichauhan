@@ -1,0 +1,20 @@
+// reverse a list
+import java.util.*;  
+public class LinkedListExample
+ {  
+     public static void main(String args[]) 
+      {  
+           LinkedList<String> list=new LinkedList<String>();  
+           list.add("Ravi");  
+           list.add("Vijay");  
+           list.add("Ajay");  
+           System.out.println(list)
+           System.out.println("after reversing list")
+           Iterator i=list.descendingIterator();  
+           while(i.hasNext())  
+           {  
+               System.out.println(i.next());  
+           }  
+             
+ }  
+}  
