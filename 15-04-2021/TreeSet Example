@@ -1,0 +1,36 @@
+// example of treeset java
+import java.util.*;
+class TreeSet1
+{
+   public static void main(String args[])
+   { 
+      TreeSet<String> set=new TreeSet<String>();  
+      set.add("Ravi");  
+      set.add("Vijay");  
+      set.add("Ajay");  
+      System.out.println(set);  
+      System.out.println("in descending order:");
+      Iterator i = descendingIterator();
+      System.out.println(set);
+      
+      TreeSet<Integer> set1=new TreeSet<Integer>();  
+      set1.add(24);  
+      set1.add(66);  
+      set1.add(12);  
+      set1.add(15);  
+      System.out.println("Highest Value: "+set1.pollFirst());  
+      System.out.println("Lowest Value: "+set1.pollLast());
+      
+      TreeSet<String> set2=new TreeSet<String>();  
+      set2.add("A");  
+      set2.add("B");  
+      set2.add("C");  
+      set2.add("D");  
+      set2.add("E");  
+      System.out.println("Initial Set: "+set2);    
+      System.out.println("Reverse Set: "+set2.descendingSet());  
+      System.out.println("Head Set: "+set2.headSet("C", true));  
+      System.out.println("SubSet: "+set2.subSet("A", false, "E", true));  
+      System.out.println("TailSet: "+set2.tailSet("C", false)); 
+   }
+}
