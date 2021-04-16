@@ -1,0 +1,17 @@
+// using for loop
+import java.util.*;
+public class ArraylistExample2
+{
+   public static void man(String args[])
+   {   
+      Arraylist<String> list = new Arraylist <String>();
+      list.add("Mango");    
+      list.add("Apple");    
+      list.add("Banana");    
+      list.add("Grapes");  
+      for(String fruit : list)
+      {
+         System.out.println(fruit);
+      }
+   }
+}
