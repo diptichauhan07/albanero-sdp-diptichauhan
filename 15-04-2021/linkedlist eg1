@@ -1,0 +1,38 @@
+// to add & remove element in different ways
+import java.util.*;
+public class LinkedListExample
+{
+  public static void main(String args[])
+  {
+     LinkedList<String> list = new LinkedList<String>();
+     list.add("Mango");   
+     list.add("Apple");    
+     list.add("Banana");    
+     list.add("Grapes");      
+     System.out.println(list);  
+     list.add(1, "Strawberry");
+     LinkedList<String> list1 = new LinkedList<String>();
+     list1.add("pineapple");   
+     list1.add("orange");
+     list.addAll(list1);
+     System.out.println(list);
+     list.addFirst("blueberry"); 
+     System.out.println(list);
+     list.addLast("pear");
+     System.out.println(list);
+     // removing element
+     
+     list.remove("Banana");
+     System.out.println(list);
+     list.remove(0);
+     System.out.println(list);
+     list.removeAll(list1)
+     System.out.println(list);
+     list.removeFirst();
+     System.out.println(list);
+     list.removeLast();
+     System.out.println(list);
+     list.clear();
+     System.out.println(list);
+  }
+}
