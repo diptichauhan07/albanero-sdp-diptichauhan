@@ -1,0 +1,22 @@
+// example program for arraydeque
+import java.util.*;
+public class ArrayDequeExample
+{
+   public static void main(String args[])
+   {
+      Deque<String> deque = new ArrayDeque<String>();
+      deque.add("Ravi");
+      deque.add("Rashi");
+      deque.add("Rashmi");
+      for(String s : deque)
+      {
+         System.out.println(s);
+      }
+      System.out.println(deque.peek());
+      deque.pollLast();
+      for(String s : deque)
+      {
+         System.out.println(s);
+      }
+   }
+}
