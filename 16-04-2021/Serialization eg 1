@@ -1,0 +1,21 @@
+import java.io.*;
+class Test1 implements Serializable
+{
+  int i=10;
+  int j=20;
+}
+class serializeDemo extends Test1
+{
+    public static void main(String args[]) throws Exception
+    {
+       Test1 t1 = new Test1();
+       FileOutputStream fos = new FileOutputStream("f.txt");
+       ObjectOutputStream oos = new ObjectOutputStream(fos);
+       oos.writeObject(t1);
+	   
+       FileInputStream fis = new FileInputStream("f.txt");
+       ObjectInputStream ois = new ObjectInputStream(fis);
+       Test1 t2 =(Test1)ois.readObject();
+       System.out.println(t2.i +" "+t2.j);
+    }
+}
