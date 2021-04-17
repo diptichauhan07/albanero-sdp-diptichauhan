@@ -18,9 +18,9 @@ class PriorityQueueExample
       }
       queue.remove();
       queue.poll();
-       while(itr1.hasNext())
+       while(itr.hasNext())
       {
-         System.out.println(itr1.next());
+         System.out.println(itr.next());
       }
    }
 }
