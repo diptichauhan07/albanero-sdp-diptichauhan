@@ -4,7 +4,7 @@ class Test1 implements Serializable
   int i=10;
   int j=20;
 }
-class serializeDemo extends Test1
+class serializeDemo 
 {
     public static void main(String args[]) throws Exception
     {
