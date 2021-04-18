@@ -1,0 +1,32 @@
+import java.util.*;
+import java.util.Map.Entry;
+class hashmapDemo
+{
+	public static void main(String args[])
+	{
+		HashMap<Integer, String> studentlist  = new HashMap<>();
+		studentlist.put(11, "a");
+		studentlist.put(12, "b");
+		studentlist.put(13, "c");
+		studentlist.put(14, "d");
+		studentlist.put(15, "e");
+		System.out.println("Student list: " + studentlist); 
+		
+		String value = studentlist.remove(13);
+		System.out.println("Removed value: " + value);
+        System.out.println("Student list:");
+        for (Entry<Integer, String> entry : studentlist.entrySet()) 
+		{
+            System.out.print(entry);
+            System.out.print(", ");
+        }
+	}
+}
+
+
+/* output
+Student list: {11=a, 12=b, 13=c, 14=d, 15=e}
+Removed value: c
+Student list:
+11=a, 12=b, 14=d, 15=e
+*/
