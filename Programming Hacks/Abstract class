@@ -1,0 +1,52 @@
+abstract class Shape1
+{
+	abstract void getArea(int lenght);
+	abstract void perimeter1();
+}
+ class Rectangle extends Shape1
+{
+	public void getArea(int lenght)
+	{
+		int breadth = 10;
+		System.out.println("Area of rectangle is: " + (lenght*breadth));
+	}
+	public void perimeter1()
+	{
+		int breadth = 10;
+		int lenght = 2;
+		System.out.println("Area of rectangle is: " + (lenght+breadth));
+	}
+}
+class circle extends Shape1
+{
+	public void getArea(int lenght)
+	{
+		double area = (2*3.14)* lenght;
+		System.out.println("Area of rectangle is: " + area);
+	}
+	public void perimeter1()
+	{
+		int lenght = 2;
+		double p = (2*3.14)*lenght;
+		System.out.println("Area of rectangle is: " + p);
+	}
+}
+class Abstractclass1
+{
+	public static void main (String args[])
+	{
+		Shape1 obj1 = new Rectangle();
+		obj1.getArea(4);
+		obj1.perimeter1();
+		Shape1 obj2 = new circle();
+		obj2.getArea(5);
+		obj2.perimeter1();
+	}
+}
+
+/* output
+Area of rectangle is: 40
+Area of rectangle is: 12
+Area of rectangle is: 31.400000000000002
+Area of rectangle is: 12.56
+*/
