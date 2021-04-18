@@ -1,0 +1,42 @@
+import java.io.*;
+class account implements Serializable
+{
+	String user = "Dipti chauhan";
+    transient String password = "1234";
+    private void writeObject(ObjectOutputStream os) throws Exception
+	{
+		os.defaultWriteObject();
+		String pwd = "123" + password;
+		os.writeObject(pwd);
+	}	
+    private void readObject(ObjectInputStream is) throws Exception
+	{
+		is.defaultReadObject();
+		String pwd = (String)is.readObject();
+		password = pwd.substring(3);
+	}	
+}
+
+class serializeDemo3
+{
+	public static void main(String args[]) throws Exception
+	{
+		account a1 = new account();
+		System.out.println(a1.user +"..." + a1.password);
+		
+		FileOutputStream fos = new FileOutputStream("t.txt");
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		oos.writeObject(a1);
+		
+		FileInputStream fis = new FileInputStream("t.txt");
+		ObjectInputStream ois = new ObjectInputStream(fis);
+		account a2 = (account)ois.readObject();
+		
+		System.out.println(a1.user +"..." + a1.password);
+	}
+}
+
+/* output
+Dipti chauhan...1234
+Dipti chauhan...1234
+*/
