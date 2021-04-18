@@ -1,0 +1,47 @@
+// example of interface in java
+interface Shape
+{
+	void getArea(int lenght);
+}
+class Rectangle implements Shape
+{
+	public void getArea(int lenght)
+	{
+		int breadth = 10;
+		System.out.println("Area of rectangle is: " + (lenght*breadth));
+	}
+}
+class Square implements Shape
+{
+	public void getArea(int lenght)
+	{
+		System.out.println("Area of square is: " + (lenght*lenght));
+	}
+}
+class Triangle implements Shape
+{
+	public void getArea(int lenght)
+	{
+		int height = 12;
+		int area = (lenght*height)/2;
+		System.out.println("Area of rectangle is: " + area);
+	}
+}
+class interfaceDemo1
+{
+	public static void main(String args[])
+	{
+		Rectangle r = new Rectangle();
+		r.getArea(6);
+		Square s = new Square();
+		s.getArea(7);
+		Triangle t = new Triangle();
+		t.getArea(4);
+	}
+}
+
+/* Output
+Area of rectangle is: 60
+Area of square is: 49
+Area of rectangle is: 24
+*/
