@@ -1,0 +1,30 @@
+import java.util.*;
+class hashsetDemo1
+{
+	public static void main(String args[])
+	{
+		HashSet<Integer> naturalno = new HashSet<Integer>();
+		naturalno.add(1);
+		naturalno.add(2);
+		naturalno.add(3);
+		naturalno.add(4);
+		naturalno.add(5);
+		System.out.println("Natural no.: " + naturalno);
+		HashSet<Integer> evenno = new HashSet<Integer>();
+		evenno.add(2);
+		evenno.add(4);
+		System.out.println("Even no.: " + evenno);
+		evenno.retainAll(naturalno);
+		System.out.println("intersection set of even and natural no.: " + evenno);
+		naturalno.removeAll(evenno);
+	    System.out.println("difference set of even and natural no.: " + naturalno);
+	}
+}
+
+
+/* output
+Natural no.: [1, 2, 3, 4, 5]
+Even no.: [2, 4]
+intersection set of even and natural no.: [2, 4]
+difference set of even and natural no.: [1, 3, 5]
+*/
