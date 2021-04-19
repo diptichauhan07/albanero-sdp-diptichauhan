@@ -1,0 +1,31 @@
+import java.util.*;
+import java.util.function.BiFunction; 
+class addDemo
+{
+	public static int add(int a, int b)
+    {
+		return a+b;
+	}	
+	public static float add(float a, float b)
+    {
+		return a+b;
+	}
+}
+class methodDemo
+{
+	public static void main (String args[])
+	{
+	  BiFunction<Integer, Integer, Integer>a1 = addDemo::add; 
+      BiFunction<Float, Float, Float>a2 = addDemo::add;	
+      int res1 = a1.apply(15, 24);  
+      float res2 = a2.apply(10.4f, 20.0f); 
+      System.out.println(res1);  
+      System.out.println(res2); 	  
+	}
+}
+
+
+/* output
+39
+30.4
+*/
