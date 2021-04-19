@@ -1,0 +1,19 @@
+@FunctionalInterface 
+interface Inter
+{
+	public void m();
+}
+class FIDemo
+{
+	public static void main(String args[])
+	{
+		Inter i = ()-> System.out.println("example of funtion interface");
+		i.m();
+	}
+}
+
+
+
+/* output
+example of funtion interface
+*/
