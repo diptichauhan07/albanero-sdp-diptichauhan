@@ -1,0 +1,33 @@
+import java.util.*;
+class student
+{
+	int st_id;
+	String name;
+	public student(int st_id, String name)
+	{
+	  super();
+	  this.st_id = st_id;
+	  this.name = name;
+	}
+}
+public class foreachDemo
+{
+	public static void main(String args[])
+	{
+		List<student> list = new ArrayList<student>();
+		list.add(new student(1,"a"));
+		list.add(new student(2,"b"));
+		list.add(new student(3,"c"));
+		System.out.println("Student table:");
+		list.forEach(st -> System.out.println(st.st_id+ ":" + st.name));
+	}
+}
+
+
+
+/* output
+Student table:
+1:a
+2:b
+3:c
+*/
