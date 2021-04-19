@@ -1,0 +1,22 @@
+interface Add
+{  
+    int add(int a,int b);  
+}  
+  
+public class lambdaDemo
+{  
+    public static void main(String[] args) 
+	{   
+        Add a1=(a,b)->(a+b);  
+        System.out.println(a1.add(10,20));  
+           
+        Add a2=(int a,int b)->(a+b);  
+        System.out.println(a2.add(15,20));  
+    }  
+}  
+
+
+/* output
+30
+35
+*/
