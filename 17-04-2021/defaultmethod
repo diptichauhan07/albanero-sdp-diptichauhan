@@ -1,0 +1,29 @@
+interface Add1{  
+      
+    default void add(){  
+	    int a = 4;
+		int b = 54;
+        System.out.println("Addition:" +(a+b));  
+    }  
+      
+}  
+public class defaulDemo implements Add1
+{  
+    public void Multiply(int a, int b)
+	{   
+        System.out.println("Multiplication:" + a*b);  
+    }  
+    public static void main(String[] args) 
+	{  
+        defaulDemo dm = new defaulDemo();  
+        dm.add();    
+        dm.Multiply(4,6);
+  
+    }  
+}  
+
+
+/* output
+Addition:58
+Multiplication:24
+*/
