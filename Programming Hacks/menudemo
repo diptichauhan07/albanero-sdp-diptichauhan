@@ -1,0 +1,159 @@
+import java.util.*;
+class restrauntmenuDemo2
+{
+    public static double Price, grossTotal, total;
+	public static void displaymenu()
+	{
+		System.out.println(".....Welcome to Resturant......\n Select ur menu:");
+		System.out.println("1. MO:MO ...... $5 \n 2. Burger ...... $2 \n 3. Pizza ...... $6 \n 4. Pastries ...... $4 \n 5. colddrinks ...... $3 \n 6. calculate");
+	}
+	
+	public static double Price(int item)
+	{
+	     if(item == 1)
+		 {
+		    System.out.println("You have order mo:mo");
+            Price = 5.00;
+		 }
+		 if(item == 2)
+		 {
+		    System.out.println("You have order burger");
+            Price = 2.00;
+		 }
+		 if(item == 3)
+		 {
+		    System.out.println("You have order pizza");
+            Price = 6.00;
+		 }
+		 if(item == 4)
+		 {
+		    System.out.println("You have order pastries");
+            Price = 4.00;
+		 }
+		 if(item == 5)
+		 {
+		    System.out.println("You have order colddrinks");
+            Price = 3.00;
+		 }
+		 quantity();
+		 return Price;
+	}
+	public static double quantity()
+	{
+		System.out.println("Enter quantity:");
+		Scanner q = new Scanner(System.in);
+		double quantity = q.nextDouble();
+		total(quantity, Price);
+		return quantity;
+	}
+	public static double total(double quantity, double Price)
+	{
+	    double total = quantity*Price;
+		System.out.println(total);
+		return total;
+	}
+	public static void GT(double grossTotal)
+	{   
+	    System.out.println(grossTotal);
+	}
+	public static void main(String args[])
+	{
+	   int item = 0;
+	   Scanner c = new Scanner(System.in);
+	   int choice;
+	   char choose;
+	   double grossTotal = 0;
+	   do{
+		 displaymenu();
+	     choice = c.nextInt();
+		 switch(choice)
+		 {
+		    case 1:
+			  item = 1;
+			  grossTotal += Price(item);
+			  break;
+	        case 2:
+			  item = 2;
+			  grossTotal += Price(item);
+			  break;
+			case 3:
+			  item = 3;
+			  grossTotal += Price(item);
+			  break;
+			case 4:
+			  item = 4;
+			  grossTotal += Price(item);
+			  break;
+			case 5:
+			  item = 5;
+			  grossTotal += Price(item);
+			  break;
+			case 6:
+			  GT(grossTotal);
+			  break;
+			default:
+			 System.out.println("wrong choice plz enter correct one");
+		 }
+		 System.out.println("Would you like to proceed or quit? \n To proceed enter Y \n To exit enter N");
+		 choose = c.next().charAt(0);
+	   } while((choose == 'y')|| (choose == 'Y'));
+	 System.out.println("Amt to be paid:" + grossTotal); 
+	 System.out.println("Enjoy ur meal");
+	   
+	}
+}
+
+
+
+/* output
+.....Welcome to Resturant......
+ Select ur menu:
+1. MO:MO ...... $5
+ 2. Burger ...... $2
+ 3. Pizza ...... $6
+ 4. Pastries ...... $4
+ 5. colddrinks ...... $3
+ 6. calculate
+2
+You have order burger
+Enter quantity:
+1
+2.0
+Would you like to proceed or quit?
+ To proceed enter Y
+ To exit enter N
+y
+.....Welcome to Resturant......
+ Select ur menu:
+1. MO:MO ...... $5
+ 2. Burger ...... $2
+ 3. Pizza ...... $6
+ 4. Pastries ...... $4
+ 5. colddrinks ...... $3
+ 6. calculate
+3
+You have order pizza
+Enter quantity:
+1
+6.0
+Would you like to proceed or quit?
+ To proceed enter Y
+ To exit enter N
+y
+.....Welcome to Resturant......
+ Select ur menu:
+1. MO:MO ...... $5
+ 2. Burger ...... $2
+ 3. Pizza ...... $6
+ 4. Pastries ...... $4
+ 5. colddrinks ...... $3
+ 6. calculate
+6
+8.0
+Would you like to proceed or quit?
+ To proceed enter Y
+ To exit enter N
+n
+Amt to be paid:8.0
+Enjoy ur meal
+*/
